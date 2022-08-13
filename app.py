@@ -36,6 +36,7 @@ def chachengfen(username):
     image_path, vtb_following_count, total_following_count = dd.image_generate()
     shutil.move (image_path,f"{spath}\\output\\{username}.jpg")
     json_r = {
+        "stat": 200 ,
         "image_url": request.url_root + f"output/{username}.jpg", # request.url_root: http://x.x.x.x:xxxx/
         "vtbcount": vtb_following_count,
         "count": total_following_count
